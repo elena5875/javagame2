@@ -1,39 +1,69 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Games
 
-Welcome,
+    A Questionaire game for those who are an avid fan of Harry Potter
+     This website is an interactive game which test your knowledge when it comes to the Harry Potter Story
+     The user will get a chance to test his knowledge of the said Story. 
+     
+     
+Features
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Background and Heading: The background of the website is the Heading also which says
+"Harry Potter Hogwarts Mystery"
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+Game Area
+    
+   The game area is in the middle of the screen and should be in front of the Heading words.
+   There is a transparent background so that the user
+   can easily read and answer the questions being asked.
+   
+    score area
+        After the user has answered all the question, It will show the number of correct answer you made. 
+        If you made a mistake, there is an icon that you can click and you can show you the right answer.
+        It will also have an option for you to retry the question again.
 
-## Codeanywhere Reminders
+    Testing
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
 
-`python3 -m http.server`
+    Validation:
+        Html: The following Errors were seen during validation using w3 html Vaildator:
+        
+        Warning: Consider adding a lang attribute to the html start tag to declare the language of this document.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+        Info: Trailing slash on void elements has no effect and interacts badly with unquoted attribute values.
 
-`http_server`
+         <link rel="stylesheet" href="assests/css/style.css"/>↩  </h
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+        Warning: Empty heading.
+        <h1></h1>↩
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    The mistake has been corrected already.
+    
+        CSS: I had my CSS code validated thru w3 validator. It showede 1 warning and 1 Error
+       The warning was that imported style sheets are not checked in direct input and file upload modes
 
-To log into the Heroku toolbelt CLI:
+       The Error was  height Too many values or values are not recognized : 850 px
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+        The Error was corrected afterwards.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+        JavaScript
 
----
+    Unfixed bugs
 
-Happy coding!
+
+    Deployment
+        
+        My work is being deployed at git hug
+
+
+    Credits
+
+        All my content from Html, javascript and css were all based on this program:
+        
+        https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide
+
+        
+        Images were downloaded from this website:
+    
+        Harry Potter logo : https://hdqwalls.com/wallpaper/1360x768/harry-potter-hogwarts-mystery-game-logo
