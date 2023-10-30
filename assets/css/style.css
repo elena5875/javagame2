@@ -2,9 +2,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: blue;
-  display: flex;
-  justify-content: center;
+   background: blue;
 }
 
 .background {
