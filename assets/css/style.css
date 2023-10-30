@@ -8,7 +8,7 @@ body {
 }
 
 .background {
-  background-image: url("assets/images/harrypotterlogo.png");
+  background-image: url("./assets/images/harrypotterlogo.png");
   height: 900px;
   background-position: center;
   background-repeat: no-repeat;
