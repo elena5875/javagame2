@@ -56,7 +56,7 @@ insert picture of the test score and the feedback
 
 #    Credits
 
-#        All my content from Html, javascript and css were all based on this program:
+###       All my content from Html, javascript and css were all based on this program:
         
   ###      https://www.codewithfaraz.com/content/161/build-a-quiz-application-with-html-css-and-javascript-step-by-step-guide
 
