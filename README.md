@@ -16,14 +16,14 @@ insert picture here for the responsive picture
 ### Though it is in a background. It is still visible to the eye and can be easily
 ### read by the user.
 
-'insert picture here the website look for mobile.
+'insert background picture here.
 
 # Game Area
     
   ###  The game area is in the middle of the screen and should at front of the Heading words.
  ###   There is a transparent background so that it the background image 
  ###   and the question will still be visible and can easily read. 
-
+insert picture of the website
    
   #  Score Area
   ###  After the user has answered all the question, It will show the number of correct answer you made. 
@@ -31,6 +31,7 @@ insert picture here for the responsive picture
   ###  you can click the button and it will show you the right answer to the questions you made a mistake.
   ###  It will also have an option for you to retry answering the questions again.
   ###  However, the options for the questions will be randomly placed.
+insert picture of the test score and the feedback
 
  #   Testing
 
