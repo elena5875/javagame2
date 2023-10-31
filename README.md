@@ -1,9 +1,9 @@
 # Games
 
 ### This website is a questionaire game for those who are an avid fan of Harry Potter
-### It interactive game to test your knowledge when it comes to the Harry Potter Story
+### It is an interactive game to test your knowledge when it comes to the Harry Potter Story
 ### The user will get a chance to test his knowledge answering the trivia question. 
-## Hope everyone is Ready for the this!!!!
+## Hope everyone is Ready for this!!!!
 ### The game is responsive in all media types.
 insert picture here for the responsive picture
      
