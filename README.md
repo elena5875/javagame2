@@ -40,7 +40,8 @@
   ###  It will also have an option for you to retry answering the questions again.
   ###  However, the options for the questions will be randomly placed.
 
- ![screenshot-tablet]()
+ ![screenshot-tablet](assets/images/feedback.jpg)
+
 
  #   Testing
 
