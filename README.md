@@ -28,7 +28,7 @@
  ###   The questions should be easily readable and the buttons easily be seen
  ###   At the left side at the end of the options the submit button should easily be seen
  ###   and changes color when you hover your mouse over it.
-![screenshot-tablet]()
+![screenshot-tablet](assets/images/questionaire.jpg)
    
   #  Score Area
   ###  After the user has answered all the question, It will show the number of correct answer you made. 
