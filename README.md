@@ -14,18 +14,21 @@
 
 ### Background and Heading: The background of the website is the Heading also which says
 ##       "Harry Potter Hogwarts Mystery"
-### The background is color black and the letters are color silver. 
-### Though it is in a background. It is still visible to the eye and can be easily
-### read by the user.
+### The background has a black color with some silver color for the letters.
+### This is to ensure that the user will immediately know that the trivia is
+### all about Harry Potter Story
 
-![screenshot-tablet]()
+![screenshot-tablet](assets/images/harrypotterlogo.png)
 
 # Game Area
     
-  ###  The game area is in the middle of the screen and should at front of the Heading words.
- ###   There is a transparent background so that it the background image 
- ###   and the question will still be visible and can easily read. 
-insert picture of the website
+  ###  The questionaire is at the middle of the screen.
+ ###   There is a transparent background and border so that the user can easily read
+ ###   the questions. 
+ ###   The questions should be easily readable and the buttons easily be seen
+ ###   At the left side at the end of the options the submit button should easily be seen
+ ###   and changes color when you hover your mouse over it.
+![screenshot-tablet]()
    
   #  Score Area
   ###  After the user has answered all the question, It will show the number of correct answer you made. 
