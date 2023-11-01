@@ -50,7 +50,7 @@
   ##  Validation:
   
 ###     Html: There were no issues when the html code was validated thru w3 validator
-    ![screenshot-tablet](assets/images/result for html.pdf)
+    [embed]http://assets/images/result for html.pdf[/embed]
     
 ###     CSS: There were no issues when the css code was validated thru the w3 validator
     ![screenshot-tablet](assets/images/w3cssvalidation2.pdf)
