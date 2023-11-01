@@ -55,7 +55,7 @@
     ![screenshot-tablet](assets/images/w3cssvalidation2.pdf)
 
 ###     JavaScript: There were no major issue when the Javascript code was validated thru the Jshint website. 
-![screenshot-tablet]()
+![screenshot-tablet](assets/images/jsscript validation.jpg)
 
 ###     Lighthouse Accessability Report. The website was also inspected thru lighthouse and showed an accessability report of  %
 ![screenshot-tablet]()
