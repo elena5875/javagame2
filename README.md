@@ -68,8 +68,8 @@
    
 ##    Deployment
         
-  ###      My work is being deployed at github
-  ###    To get there you need to do the following:
+  ###      My work was deployed thru github
+  ###    The following method was done:
   ###   1. Go to github 
   ###   2. Choose the repository elena5875/javagames2
   ###   3. Go to Settings
