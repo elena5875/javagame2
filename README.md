@@ -5,8 +5,7 @@
 ### The user will get a chance to test his knowledge answering the trivia question. 
 ## Hope everyone is Ready for this!!!!
 ### The game is responsive in all media types.
-insert picture here for the responsive picture
-     
+![screenshot-tablet]()
      
 # Features
 
@@ -16,7 +15,7 @@ insert picture here for the responsive picture
 ### Though it is in a background. It is still visible to the eye and can be easily
 ### read by the user.
 
-'insert background picture here.
+![screenshot-tablet]()
 
 # Game Area
     
@@ -31,7 +30,7 @@ insert picture of the website
   ###  you can click the button and it will show you the right answer to the questions you made a mistake.
   ###  It will also have an option for you to retry answering the questions again.
   ###  However, the options for the questions will be randomly placed.
-insert picture of the test score and the feedback
+![screenshot-tablet]()
 
  #   Testing
 
@@ -39,15 +38,15 @@ insert picture of the test score and the feedback
   ##  Validation:
   
 ###     Html: There were no issues when the html code was validated thru w3 validator
-    insert pic of the validation
+    ![screenshot-tablet]()
     
 ###     CSS: There were no issues when the css code was validated thru the w3 validator
-     insert pic of the validation
+    ![screenshot-tablet]()
 
 ###     JavaScript: There were no major issue when the Javascript code was validated thru the Jshint website. 
 
 ###     Lighthouse Accessability Report. The website was also inspected thru lighthouse and showed an accessability report of  %
- insert lighthouse report 
+![screenshot-tablet]()
    
 ##    Deployment
         
