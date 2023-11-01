@@ -51,11 +51,11 @@
   
 ###     Html: There were no issues when the html code was validated thru w3 validator
 
-    ![screenshot-tablet](assets/images/jshint.jpg)
+![screenshot-tablet](assets/images/jshint.jpg)
      
 ###     CSS: There were no issues when the css code was validated thru the w3 validator
 
-    ![screenshot-tablet](assets/images/jshint.jpg)
+![screenshot-tablet](assets/images/jshint.jpg)
     
 ###     JavaScript: There were no major issue when the Javascript code was validated thru the Jshint website. 
 ![screenshot-tablet](assets/images/jshint.jpg)
