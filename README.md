@@ -7,7 +7,8 @@
 
 ![screenshot-tablet](assets/images/questionaire.jpg)
 
-### The game is responsive in all media types.
+
+## The game is responsive in all media types.
 ![screenshot-tablet](assets/images/responsive3.jpg)
      
 # Features
@@ -65,6 +66,14 @@
 ##    Deployment
         
   ###      My work is being deployed at github
+  ###    To get there you need to do the following:
+  ###   1. Go to github 
+  ###   2. Choose the repository elena5875/javagames2
+  ###   3. Go to Settings
+  ###   4. At the left side click pages
+  ###   5. Go to Branch and choose main. 
+  ###   6. Click Save. Wait for the repository to go live
+  ###   7. Once your site becomes live click visit site.
 
 
 #    Credits
