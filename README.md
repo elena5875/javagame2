@@ -60,7 +60,7 @@
 
 ###     Lighthouse Accessability Report. The website was also inspected thru lighthouse and showed an accessability report of  %
 ![screenshot-tablet](assets/images/accessability1.1.jpg)
-![screenshot-tablet](assets/images/accessability2.2.pdf)
+![screenshot-tablet](assets/images/accessability2.2.jpg)
 ![screenshot-tablet](assets/images/accessability3.3.pdf)
    
 ##    Deployment
