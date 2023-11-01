@@ -15,7 +15,7 @@
 
 ### Background and Heading: The background of the website is the Heading also which says
 ##       "Harry Potter Hogwarts Mystery"
-### The background has a black color with some silver color for the letters.
+### The background has a black color with a silver color for the letters.
 ### This is to ensure that the user will immediately know that the trivia is
 ### all about Harry Potter Story
 
