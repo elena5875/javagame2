@@ -4,8 +4,10 @@
 ### It is an interactive game to test your knowledge when it comes to the Harry Potter Story
 ### The user will get a chance to test his knowledge answering the trivia question. 
 ## Hope everyone is Ready for this!!!!
-### The game is responsive in all media types.
 ![screenshot-tablet]()
+
+### The game is responsive in all media types.
+![screenshot-tablet](assets/images/responsive3.jpg)
      
 # Features
 
