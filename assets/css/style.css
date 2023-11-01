@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 body {
-  font-family: 'Poppins', sans-serif;
-   background: blue;
+    font-family: 'Poppins', sans-serif;
+    background: blue;
 }
 
 .background {
-  background-image: url("../images/harrypotterlogo.png");
-  height: 900px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  justify-content: center;
+    background-color: #f0f0f0; /* Fallback color */
+    background-image: url("../images/harrypotterlogo.png"), linear-gradient(to bottom, #f0f0f0, #ccc);
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
@@ -25,31 +26,17 @@ body {
     border-radius: 20px;
 }
 
-
-
-.question {
-    color: black;
-    letter-spacing: 0.2cm;
-    font-weight: bolder;
-    margin-bottom: 0px;
-    background-color: rgba(255, 255, 0, 0.5);
-}
-
-.options {
-    color: black;
-    letter-spacing: 0.2cm;
-    font-weight: bolder;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 0, 0.5);
-}
-
-.option {
-    color: black;
-    font-weight: bolder;
-    letter-spacing: 0.2cm;
-    display: block;
+.question, .options, .option {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
     margin-bottom: 10px;
-    background-color: rgba(255, 255, 0, 0.5);
+    font-size: 1rem;
+    letter-spacing: normal;
+    color: black;
+    font-weight: bolder;
+    display: block;
 }
 
 .button {
@@ -70,14 +57,38 @@ body {
     background-color: #3071a9;
 }
 
+.button:active {
+    background-color: #285e8e;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #afd8f8;
+}
+
 .result {
     text-align: center;
     margin-top: 20px;
     font-weight: bold;
     color: black;
-    background-color: rgba(255, 255, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .hide {
     display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    .question, .options, .option {
+        font-size: 0.9rem;
+    }
+}
+
+.option input[type="radio"] {
+    margin-right: 10px;
 }
