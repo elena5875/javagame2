@@ -22,13 +22,13 @@ body {
     padding: 50px;
     margin-top: 200px;
     background-color: transparent;
-    box-shadow: 0 2px 4px rgba((0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
 
 .question, .options, .option {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba((0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     margin-bottom: 10px;
