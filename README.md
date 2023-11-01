@@ -32,11 +32,15 @@
    
   #  Score Area
   ###  After the user has answered all the question, It will show the number of correct answer you made. 
+  ![screenshot-tablet](assets/images/score.jpg)
+
+  #    Feedback
   ###  If you made a mistake, there is an icon that says Show Answer,
   ###  you can click the button and it will show you the right answer to the questions you made a mistake.
   ###  It will also have an option for you to retry answering the questions again.
   ###  However, the options for the questions will be randomly placed.
-![screenshot-tablet]()
+
+ ![screenshot-tablet]()
 
  #   Testing
 
