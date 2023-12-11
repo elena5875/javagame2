@@ -1,13 +1,13 @@
-/* Set a background color for the body */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f0f0f0;
-    /* Light gray background */
-    margin: 0;
+    background: blue;
 }
 
-/* Styles for the main background */
 .background {
+    background-color: #f0f0f0;
+    /* Fallback color */
     background-image: url("../images/harrypotterlogo.png"), linear-gradient(to bottom, #f0f0f0, #ccc);
     height: 900px;
     background-position: center;
@@ -18,44 +18,34 @@ body {
     justify-content: center;
 }
 
-/* Styles for the main container */
 .container {
-    width: 90%;
-    max-width: 500px;
+    width: 500px;
     padding: 50px;
     margin-top: 200px;
-    background-color: #fff;
-    /* White background for the main container */
+    background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
 
-/* Styles for question, options, and answer options */
 .question,
 .options,
 .option {
-        background-color: rgba(255, 255, 255, 0.9);
-        /* Semi-transparent white background */
-        border: 1px solid #e0e0e0;
-        /* Light gray border */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 15px;
-        /* Increased padding for better readability */
-        margin-bottom: 20px;
-        /* Increased margin for better separation */
-        font-size: 1rem;
-        letter-spacing: normal;
-        color: #333;
-        /* Dark text color */
-        font-weight: bolder;
-        display: block;
-    }
-/* Styles for interactive buttons */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    letter-spacing: normal;
+    color: black;
+    font-weight: bolder;
+    display: block;
+}
+
 .button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #428bca;
-    /* Blue button color */
     color: #fff;
     border: none;
     cursor: pointer;
@@ -66,35 +56,27 @@ body {
     margin-right: 10px;
 }
 
-/* Button hover effect */
 .button:hover {
     background-color: #3071a9;
-    /* Darker blue on hover */
 }
 
-/* Button active effect */
 .button:active {
     background-color: #285e8e;
-    /* Even darker blue when clicked */
 }
 
-/* Button focus effect */
 .button:focus {
     outline: none;
     box-shadow: 0 0 0 2px #afd8f8;
 }
 
-/* Styles for result display */
 .result {
     text-align: center;
     margin-top: 20px;
     font-weight: bold;
-    color: #333;
-    /* Dark text color */
-    background-color: #fff;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Hide class for elements */
 .hide {
     display: none;
 }
@@ -113,7 +95,6 @@ body {
     }
 }
 
-/* Additional styles for radio buttons in options */
 .option input[type="radio"] {
     margin-right: 10px;
 }
