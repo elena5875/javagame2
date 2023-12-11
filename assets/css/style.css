@@ -34,23 +34,22 @@ body {
 .question,
 .options,
 .option {
-    background-color: #fff;
-    /* White background for questions and options */
-    border: 1px solid #e0e0e0;
-    /* Light gray border */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    /* Increased padding for better readability */
-    margin-bottom: 20px;
-    /* Increased margin for better separation */
-    font-size: 1rem;
-    letter-spacing: normal;
-    color: #333;
-    /* Dark text color */
-    font-weight: bolder;
-    display: block;
-}
-
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Semi-transparent white background */
+        border: 1px solid #e0e0e0;
+        /* Light gray border */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        /* Increased padding for better readability */
+        margin-bottom: 20px;
+        /* Increased margin for better separation */
+        font-size: 1rem;
+        letter-spacing: normal;
+        color: #333;
+        /* Dark text color */
+        font-weight: bolder;
+        display: block;
+    }
 /* Styles for interactive buttons */
 .button {
     display: inline-block;
