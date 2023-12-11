@@ -1,16 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
-/* Set default styles for the body */
+/* Set a background color for the body */
 body {
     font-family: 'Poppins', sans-serif;
-    background: blue;
+    background: #f0f0f0;
+    /* Light gray background */
     margin: 0;
-    /* Remove default body margin */
 }
 
 /* Styles for the main background */
 .background {
-    background-color: #f0f0f0;
     background-image: url("../images/harrypotterlogo.png"), linear-gradient(to bottom, #f0f0f0, #ccc);
     height: 900px;
     background-position: center;
@@ -24,12 +21,11 @@ body {
 /* Styles for the main container */
 .container {
     width: 90%;
-    /* Adjusted for better responsiveness */
     max-width: 500px;
-    /* Set a maximum width to maintain readability */
     padding: 50px;
     margin-top: 200px;
-    background-color: transparent;
+    background-color: #fff;
+    /* White background for the main container */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
@@ -38,14 +34,19 @@ body {
 .question,
 .options,
 .option {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    /* White background for questions and options */
+    border: 1px solid #e0e0e0;
+    /* Light gray border */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    /* Increased padding for better readability */
+    margin-bottom: 20px;
+    /* Increased margin for better separation */
     font-size: 1rem;
     letter-spacing: normal;
-    color: black;
+    color: #333;
+    /* Dark text color */
     font-weight: bolder;
     display: block;
 }
@@ -55,6 +56,7 @@ body {
     display: inline-block;
     padding: 10px 20px;
     background-color: #428bca;
+    /* Blue button color */
     color: #fff;
     border: none;
     cursor: pointer;
@@ -68,11 +70,13 @@ body {
 /* Button hover effect */
 .button:hover {
     background-color: #3071a9;
+    /* Darker blue on hover */
 }
 
 /* Button active effect */
 .button:active {
     background-color: #285e8e;
+    /* Even darker blue when clicked */
 }
 
 /* Button focus effect */
@@ -86,8 +90,9 @@ body {
     text-align: center;
     margin-top: 20px;
     font-weight: bold;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    /* Dark text color */
+    background-color: #fff;
 }
 
 /* Hide class for elements */
