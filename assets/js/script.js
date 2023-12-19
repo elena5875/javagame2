@@ -72,7 +72,7 @@ const quizData = [
 const introContainer = document.getElementById('introduction');
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
-let submitButton;
+let submitButton = document.getElementById('submit'); // Define submitButton here
 const retryButton = document.getElementById('retry');
 const showAnswerButton = document.getElementById('showAnswer');
 
@@ -133,14 +133,12 @@ function startGame() {
     introContainer.style.display = 'none';
     quizContainer.style.display = 'block';
 
-    // Show submit button in the quiz section
-    submitButton.style.display = 'inline-block';
-
     // Call displayQuestion after setting submitButton display
     displayQuestion();
 
     submitButton.addEventListener('click', checkAnswer);
 }
+
 // Function to check the selected answer
 function checkAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
