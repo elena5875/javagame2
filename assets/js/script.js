@@ -134,8 +134,8 @@ function startGame() {
     introContainer.style.display = 'none';
     quizContainer.style.display = 'block';
 
-    // Hide submit button in the introduction section
-    submitButton.style.display = 'none';
+    // Show submit button in the quiz section
+    submitButton.style.display = 'inline-block';
 
     displayQuestion();
 

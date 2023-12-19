@@ -92,10 +92,6 @@ body {
     display: none;
 }
 
-/* Add this block to specifically target the submit button with the hide class */
-#submit.hide {
-    display: inline-block;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
