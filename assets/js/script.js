@@ -135,13 +135,12 @@ function startGame() {
     quizContainer.style.display = 'block';
 
     // Hide submit button in the quiz section
-    submitButton.style.display = 'none';
+    document.getElementById('submit').style.display = 'none';
 
     displayQuestion();
 
     submitButton.addEventListener('click', checkAnswer);
 }
-
 
 // Function to check the selected answer
 function checkAnswer() {
