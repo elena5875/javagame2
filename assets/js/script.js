@@ -92,7 +92,6 @@ function shuffleArray(array) {
 // Function to display a question
 function displayQuestion() {
     startTime = Date.now();
-    submitButton = document.getElementById('submit');
 
     const questionData = quizData[currentQuestion];
 
@@ -137,11 +136,11 @@ function startGame() {
     // Show submit button in the quiz section
     submitButton.style.display = 'inline-block';
 
+    // Call displayQuestion after setting submitButton display
     displayQuestion();
 
     submitButton.addEventListener('click', checkAnswer);
 }
-
 // Function to check the selected answer
 function checkAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
@@ -217,7 +216,7 @@ function showAnswer() {
             <p>Incorrect Answers:</p>
             ${incorrectAnswersHtml}
           `;
-} 
+}
 // Event listener for the start button
 document.getElementById('startGame').addEventListener('click', startGame);
 
