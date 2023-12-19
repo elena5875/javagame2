@@ -75,8 +75,13 @@ body {
     box-shadow: 0 0 0 2px #afd8f8;
 }
 
-.hide {
+.button.hide {
     display: none;
+}
+
+/* Add this block to specifically target the submit button with the hide class */
+#submit.hide {
+    display: inline-block;
 }
 
 /* Responsive Design */
