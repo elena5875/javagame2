@@ -1,3 +1,4 @@
+// Quiz data containing questions, options, and correct answers
 const quizData = [
     {
         question: 'What do you call ordinary people in the wizarding world?',
@@ -66,6 +67,7 @@ const quizData = [
     },
 ];
 
+// DOM elements
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
 const submitButton = document.getElementById('submit');
@@ -75,7 +77,9 @@ const showAnswerButton = document.getElementById('showAnswer');
 let currentQuestion = 0;
 let score = 0;
 let incorrectAnswers = [];
+let startTime;
 
+// Function to shuffle an array randomly
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -83,7 +87,10 @@ function shuffleArray(array) {
     }
 }
 
+// Function to display a question
 function displayQuestion() {
+    startTime = Date.now();  
+
     const questionData = quizData[currentQuestion];
 
     const questionElement = document.createElement('div');
@@ -117,6 +124,7 @@ function displayQuestion() {
     quizContainer.appendChild(optionsElement);
 }
 
+// Function to check the selected answer
 function checkAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
     if (selectedOption) {
@@ -140,6 +148,7 @@ function checkAnswer() {
     }
 }
 
+// Function to display the final result
 function displayResult() {
     quizContainer.style.display = 'none';
     submitButton.style.display = 'none';
@@ -148,6 +157,7 @@ function displayResult() {
     resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
 }
 
+// Function to retry the quiz
 function retryQuiz() {
     currentQuestion = 0;
     score = 0;
@@ -160,6 +170,7 @@ function retryQuiz() {
     displayQuestion();
 }
 
+// Function to show correct answers for incorrect responses
 function showAnswer() {
     quizContainer.style.display = 'none';
     submitButton.style.display = 'none';
@@ -184,8 +195,27 @@ function showAnswer() {
   `;
 }
 
+// Function to show the elapsed time
+function showElapsedTime() {
+    const elapsedTime = Math.floor((Date.now() - startTime) / 1000); // Convert milliseconds to seconds
+    const minutes = Math.floor(elapsedTime / 60);
+    const seconds = elapsedTime % 60;
+
+    // Display the elapsed time in the console (you can replace this with updating a DOM element)
+    console.log(`Time Elapsed: ${minutes}m ${seconds}s`);
+}
+
+// Update the timer every second
+const timerInterval = setInterval(showElapsedTime, 1000);
+
+
+// Event listeners for buttons
 submitButton.addEventListener('click', checkAnswer);
 retryButton.addEventListener('click', retryQuiz);
 showAnswerButton.addEventListener('click', showAnswer);
 
+// Initial display of the first question
 displayQuestion();
+
+// Set the start time when the quiz starts
+startTime = Date.now();
