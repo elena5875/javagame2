@@ -134,7 +134,7 @@ function startGame() {
     introContainer.style.display = 'none';
     quizContainer.style.display = 'block';
 
-    // Hide submit button in the welcome section
+    // Hide submit button in the quiz section
     submitButton.style.display = 'none';
 
     displayQuestion();
