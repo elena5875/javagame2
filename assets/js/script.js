@@ -89,9 +89,9 @@ function shuffleArray(array) {
     }
 }
 
-// Function to display a question
 function displayQuestion() {
     startTime = Date.now();
+    submitButton = document.getElementById('submit'); // Move this line to the beginning
 
     const questionData = quizData[currentQuestion];
 
@@ -127,6 +127,7 @@ function displayQuestion() {
 
     submitButton.style.display = 'inline-block';
 }
+
 
 // Function to start the game
 function startGame() {
