@@ -3,26 +3,91 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: blue;
+    margin: 0;
+    /* Remove default margin to ensure full background coverage */
 }
 
 .background {
     background-color: #f0f0f0;
     /* Fallback color */
     background-image: url("../images/harrypotterlogo.png"), linear-gradient(to bottom, #f0f0f0, #ccc);
-    height: 900px;
+    height: 100vh;
+    /* Use viewport height for full-screen background */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    /* Center content vertically */
 }
+
+
+
+
+.introduction {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Light background color */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.9);
+    /* Updated box shadow */
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* ... other styles ... */
+.introduction h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.introduction p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#startGame {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+#startGame:hover {
+    background-color: #3071a9;
+}
+
+#startGame:active {
+    background-color: #285e8e;
+}
+
+#startGame:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #afd8f8;
+}
+
+
+
+
+
+
 
 .container {
     width: 500px;
     padding: 50px;
-    margin-top: 200px;
-    background-color: transparent;
+    margin-top: 50px;
+    /* Adjusted margin for better spacing */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Lightened background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
@@ -30,26 +95,29 @@ body {
 .question,
 .options,
 .option {
-    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 1rem;
+    padding: 20px;
+    /* Increased padding for better spacing */
+    margin-bottom: 20px;
+    /* Increased margin for better spacing */
+    font-size: 1.2rem;
+    /* Increased font size for better readability */
     letter-spacing: normal;
     color: black;
     font-weight: bolder;
-    display: block;
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    /* Increased padding for better button size */
     background-color: #428bca;
     color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    /* Increased font size for better readability */
     font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.3s;
@@ -81,6 +149,8 @@ body {
     display: none;
 }
 
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -91,7 +161,19 @@ body {
     .question,
     .options,
     .option {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        /* Adjusted font size for smaller screens */
+        padding: 15px;
+        /* Adjusted padding for smaller screens */
+        margin-bottom: 15px;
+        /* Adjusted margin for smaller screens */
+    }
+
+    .button {
+        padding: 12px 24px;
+        /* Adjusted padding for smaller screens */
+        font-size: 16px;
+        /* Adjusted font size for smaller screens */
     }
 }
 
