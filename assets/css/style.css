@@ -31,23 +31,22 @@ body {
     font-size: 1.2rem;
     letter-spacing: normal;
     font-weight: bolder;
-    color: #fff;
-
+    color: #000;
+    /* Change this to black or any color that contrasts with your background */
 }
 
 .options {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* Adjust the gap as needed */
 }
 
 .option {
     display: flex;
     align-items: center;
     gap: 5px;
-    /* Adjust the gap as needed */
 }
+
 .introduction,
 .result,
 .container {
