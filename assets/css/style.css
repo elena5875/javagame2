@@ -35,6 +35,19 @@ body {
 
 }
 
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Adjust the gap as needed */
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Adjust the gap as needed */
+}
 .introduction,
 .result,
 .container {
