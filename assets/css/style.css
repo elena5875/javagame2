@@ -4,6 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: blue;
     margin: 0;
+    color: #fff; /* Set text color to white */
 }
 
 .background {
@@ -31,8 +32,7 @@ body {
     font-size: 1.2rem;
     letter-spacing: normal;
     font-weight: bolder;
-    color: #000;
-    /* Change this to black or any color that contrasts with your background */
+    color: #000; /* Change this to black or any color that contrasts with your background */
 }
 
 .options {
@@ -91,7 +91,6 @@ body {
     display: none;
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -103,18 +102,13 @@ body {
     .options,
     .option {
         font-size: 1rem;
-        /* Adjusted font size for smaller screens */
         padding: 15px;
-        /* Adjusted padding for smaller screens */
         margin-bottom: 15px;
-        /* Adjusted margin for smaller screens */
     }
 
     .button {
         padding: 12px 24px;
-        /* Adjusted padding for smaller screens */
         font-size: 16px;
-        /* Adjusted font size for smaller screens */
     }
 }
 
