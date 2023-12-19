@@ -134,11 +134,14 @@ function startGame() {
     introContainer.style.display = 'none';
     quizContainer.style.display = 'block';
 
-    // Call displayQuestion after setting submitButton display
+    // Hide submit button in the welcome section
+    submitButton.style.display = 'none';
+
     displayQuestion();
 
     submitButton.addEventListener('click', checkAnswer);
 }
+
 
 // Function to check the selected answer
 function checkAnswer() {
