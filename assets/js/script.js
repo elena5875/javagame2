@@ -135,7 +135,7 @@ function startGame() {
     quizContainer.style.display = 'block';
 
     submitButton = document.getElementById('submit');
-    submitButton.style.display = 'inline-block';
+   
 
     displayQuestion();
 
