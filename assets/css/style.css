@@ -9,16 +9,20 @@ body {
 
 .background {
     background-color: #f0f0f0;
-    background-image: url("../images/harrypotterlogo.png"), linear-gradient(to bottom, #f0f0f0, #ccc);
+    background-image: 
+        url("../images/harrypotterlogo.png"),
+        url("../images/harrypotterlogo.png"),
+        url("../images/harrypotterlogo.png"),
+        url("../images/harrypotterlogo.png"),
+        linear-gradient(to bottom, #f0f0f0, #ccc);
     height: 100vh;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; /* Updated property for responsive background */
+    background-repeat: repeat; /* Updated property for repeating the image */
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .introduction,
 .result,
 .container,
