@@ -76,29 +76,25 @@ const submitButton = document.getElementById('submit');
 const retryButton = document.getElementById('retry');
 const showAnswerButton = document.getElementById('showAnswer');
 
+
 let currentQuestion = 0;
 let score = 0;
 let incorrectAnswers = [];
 
 // Event Listeners
-letTheGameBeginButton.addEventListener('click', () => {
-    introductionSection.style.display = 'none';
-    quizContainer.style.display = 'block';
-    displayQuestion();
-});
-
+letTheGameBeginButton.addEventListener('click', startGame);
 submitButton.addEventListener('click', checkAnswer);
 retryButton.addEventListener('click', retryQuiz);
 showAnswerButton.addEventListener('click', showAnswer);
 
 // Functions
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
+function startGame() {
+    introductionSection.style.display = 'none';
+    quizContainer.style.display = 'block';
+    displayQuestion();
 }
 
+// Function to display questions
 function displayQuestion() {
     const questionData = quizData[currentQuestion];
 
@@ -109,36 +105,32 @@ function displayQuestion() {
     const optionsElement = document.createElement('div');
     optionsElement.className = 'options';
 
-    const shuffledOptions = [...questionData.options];
-    shuffleArray(shuffledOptions);
+    const shuffledOptions = [...questionData.options].sort(() => Math.random() - 0.5);
 
-    for (let i = 0; i < shuffledOptions.length; i++) {
+    shuffledOptions.forEach(optionText => {
         const option = document.createElement('label');
         option.className = 'option';
 
         const radio = document.createElement('input');
         radio.type = 'radio';
         radio.name = 'quiz';
-        radio.value = shuffledOptions[i];
+        radio.value = optionText;
 
-        const optionText = document.createTextNode(shuffledOptions[i]);
+        const optionTextNode = document.createTextNode(optionText);
 
         option.appendChild(radio);
-        option.appendChild(optionText);
+        option.appendChild(optionTextNode);
         optionsElement.appendChild(option);
-    }
+    });
 
     quizContainer.innerHTML = '';
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
 
-    // Ensure the global submitButton is used
     submitButton.style.display = 'inline-block';
-    submitButton.addEventListener('click', checkAnswer);
 }
 
-
-
+// Function to check answers
 function checkAnswer() {
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
 
@@ -166,6 +158,7 @@ function checkAnswer() {
 }
 
 
+//function to display results
 function displayResult() {
     quizContainer.style.display = 'none';
     submitButton.style.display = 'none';
@@ -174,6 +167,7 @@ function displayResult() {
     resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
 }
 
+//Function to retry quiz
 function retryQuiz() {
     currentQuestion = 0;
     score = 0;
@@ -186,6 +180,7 @@ function retryQuiz() {
     displayQuestion();
 }
 
+// Function to show answers
 function showAnswer() {
     quizContainer.style.display = 'none';
     submitButton.style.display = 'none';
@@ -209,4 +204,3 @@ function showAnswer() {
     ${incorrectAnswersHtml}
   `;
 }
-

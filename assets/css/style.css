@@ -1,12 +1,13 @@
+/* Set default styles for the entire document */
 body {
     font-family: 'Poppins', sans-serif;
     background: blue;
     margin: 0;
     color: #fff;
     font-size: 16px;
-    /* Set a default font size for the entire document */
 }
 
+/* Background styling for the main container */
 .background {
     background-color: #f0f0f0;
     background-image: url("../images/harrypotterlogo.png"), linear-gradient(to bottom, #f0f0f0, #ccc);
@@ -18,9 +19,10 @@ body {
     justify-content: center;
     align-items: center;
     color: #000;
-    /* Set text color for better contrast */
+    
 }
 
+/* Styling for the main content container */
 .container {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
@@ -29,6 +31,7 @@ body {
     font-weight: bold;
 }
 
+/* Styling for introduction section */
 .introduction {
     border: 1px solid #4CAF50;
     box-shadow: 0 2px 4px rgba(0, 128, 0, 0.2);
@@ -37,6 +40,7 @@ body {
     font-weight: bold;
 }
 
+/* Styling for quiz questions, options, and buttons */
 .question,
 .options,
 .option {
@@ -48,18 +52,21 @@ body {
     font-weight: bolder;
 }
 
+/* Styling for options container */
 .options {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+/* Styling for each option */
 .option {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
+/* Styling for buttons */
 .button {
     display: inline-block;
     padding: 15px 30px;
@@ -87,6 +94,7 @@ body {
     box-shadow: 0 0 0 2px #afd8f8;
 }
 
+/* Hide the button initially */
 .button.hide {
     display: none;
 }
@@ -112,6 +120,7 @@ body {
     }
 }
 
+/* Margin for radio button in options */
 .option input[type="radio"] {
     margin-right: 10px;
 }
