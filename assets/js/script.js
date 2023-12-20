@@ -72,7 +72,7 @@ const quizData = [
 const introContainer = document.getElementById('introduction');
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
-let submitButton = document.getElementById('submit'); // Define submitButton here
+const submitButton = document.getElementById('submit'); // Added for quiz questions
 const retryButton = document.getElementById('retry');
 const showAnswerButton = document.getElementById('showAnswer');
 
@@ -89,9 +89,9 @@ function shuffleArray(array) {
     }
 }
 
+// Function to display a question
 function displayQuestion() {
     startTime = Date.now();
-    submitButton = document.getElementById('submit');
 
     const questionData = quizData[currentQuestion];
 
@@ -125,22 +125,17 @@ function displayQuestion() {
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
 
-    submitButton.style.display = 'inline-block';
+    submitButton.style.display = 'inline-block'; // Show the submit button for quiz questions
+    showAnswerButton.style.display = 'none'; // Hide the "Show Answer" button for the current question
 }
 
-
-//Function to start the game
+// Function to start the game
 function startGame() {
     introContainer.style.display = 'none';
     quizContainer.style.display = 'block';
 
     displayQuestion();
-
-    submitButton.style.display = 'inline-block';
-
-    submitButton.addEventListener('click', checkAnswer);
 }
-
 
 // Function to check the selected answer
 function checkAnswer() {
@@ -160,12 +155,10 @@ function checkAnswer() {
 
         if (currentQuestion < quizData.length - 1) {
             currentQuestion++;
+            displayQuestion();
         } else {
             displayResult();
-            return;
         }
-
-        displayQuestion();
     } else {
         alert('Please choose an answer before submitting.');
     }
@@ -195,7 +188,6 @@ function retryQuiz() {
 
 // Function to show correct answers for incorrect responses
 function showAnswer() {
-    console.log('showAnswer function called');
     quizContainer.style.display = 'none';
     submitButton.style.display = 'none';
     retryButton.style.display = 'inline-block';
@@ -218,13 +210,8 @@ function showAnswer() {
             ${incorrectAnswersHtml}
           `;
 }
-// Event listener for the start button
-document.getElementById('startGame').addEventListener('click', startGame);
 
-// Event listeners for buttons
+// Event listeners
+document.getElementById('letTheGameBegin').addEventListener('click', startGame);
 retryButton.addEventListener('click', retryQuiz);
 showAnswerButton.addEventListener('click', showAnswer);
-
-// Event listener for the "Show Answer" button
-showAnswerButton.addEventListener('click', showAnswer);
-
