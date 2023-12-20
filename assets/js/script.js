@@ -93,8 +93,7 @@ function shuffleArray(array) {
 function startGame() {
     introContainer.style.display = 'none';
     quizContainer.style.display = 'block';
-    submitButton.style.display = 'none';
-
+    submitButton.style.display = 'none';  
     displayQuestion();
 }
 
@@ -132,87 +131,85 @@ function displayQuestion() {
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
 
-
     submitButton.style.display = 'inline-block';
-    showAnswerButton.style.display = 'none';
-}
 
-// Function to check the selected answer
-function checkAnswer() {
-    const selectedOption = document.querySelector('input[name="quiz"]:checked');
-    if (selectedOption) {
-        const answer = selectedOption.value;
-        if (answer === quizData[currentQuestion].answer) {
-            score++;
-        } else {
-            incorrectAnswers.push({
-                question: quizData[currentQuestion].question,
-                incorrectAnswer: answer,
-                correctAnswer: quizData[currentQuestion].answer,
-            });
-        }
-        selectedOption.checked = false;
 
-        if (currentQuestion < quizData.length - 1) {
-            currentQuestion++;
-            displayQuestion();
+    // Function to check the selected answer
+    function checkAnswer() {
+        const selectedOption = document.querySelector('input[name="quiz"]:checked');
+        if (selectedOption) {
+            const answer = selectedOption.value;
+            if (answer === quizData[currentQuestion].answer) {
+                score++;
+            } else {
+                incorrectAnswers.push({
+                    question: quizData[currentQuestion].question,
+                    incorrectAnswer: answer,
+                    correctAnswer: quizData[currentQuestion].answer,
+                });
+            }
+            selectedOption.checked = false;
+
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                displayQuestion();
+            } else {
+                displayResult();
+            }
         } else {
-            displayResult();
+            alert('Please choose an answer before submitting.');
         }
-    } else {
-        alert('Please choose an answer before submitting.');
     }
-}
 
-// Function to display the final result
-function displayResult() {
-    quizContainer.style.display = 'none';
-    submitButton.style.display = 'none';
-    retryButton.style.display = 'inline-block';
-    showAnswerButton.style.display = 'inline-block';
-    resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
-}
+    // Function to display the final result
+    function displayResult() {
+        quizContainer.style.display = 'none';
+        submitButton.style.display = 'none';
+        retryButton.style.display = 'inline-block';
+        showAnswerButton.style.display = 'inline-block';
+        resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+    }
 
-// Function to retry the quiz
-function retryQuiz() {
-    currentQuestion = 0;
-    score = 0;
-    incorrectAnswers = [];
-    quizContainer.style.display = 'block';
-    submitButton.style.display = 'inline-block';
-    retryButton.style.display = 'none';
-    showAnswerButton.style.display = 'none';
-    resultContainer.innerHTML = '';
-    displayQuestion();
-}
+    // Function to retry the quiz
+    function retryQuiz() {
+        currentQuestion = 0;
+        score = 0;
+        incorrectAnswers = [];
+        quizContainer.style.display = 'block';
+        submitButton.style.display = 'inline-block';
+        retryButton.style.display = 'none';
+        showAnswerButton.style.display = 'none';
+        resultContainer.innerHTML = '';
+        displayQuestion();
+    }
 
-// Function to show correct answers for incorrect responses
-function showAnswer() {
-    quizContainer.style.display = 'none';
-    submitButton.style.display = 'none';
-    retryButton.style.display = 'inline-block';
-    showAnswerButton.style.display = 'none';
+    // Function to show correct answers for incorrect responses
+    function showAnswer() {
+        quizContainer.style.display = 'none';
+        submitButton.style.display = 'none';
+        retryButton.style.display = 'inline-block';
+        showAnswerButton.style.display = 'none';
 
-    let incorrectAnswersHtml = '';
-    for (let i = 0; i < incorrectAnswers.length; i++) {
-        incorrectAnswersHtml += `
+        let incorrectAnswersHtml = '';
+        for (let i = 0; i < incorrectAnswers.length; i++) {
+            incorrectAnswersHtml += `
             <p>
                 <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
                 <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
                 <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
             </p>
         `;
-    }
+        }
 
-    resultContainer.innerHTML = `
+        resultContainer.innerHTML = `
         <p>You scored ${score} out of ${quizData.length}!</p>
         <p>Incorrect Answers:</p>
         ${incorrectAnswersHtml}
     `;
-}
+    }
 
-// Event listeners
-startButton.addEventListener('click', startGame);
-submitButton.addEventListener('click', checkAnswer);
-retryButton.addEventListener('click', retryQuiz);
-showAnswerButton.addEventListener('click', showAnswer);
+    // Event listeners
+    startButton.addEventListener('click', startGame);
+    submitButton.addEventListener('click', checkAnswer);
+    retryButton.addEventListener('click', retryQuiz);
+    showAnswerButton.addEventListener('click', showAnswer);
