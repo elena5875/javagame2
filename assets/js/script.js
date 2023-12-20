@@ -93,9 +93,10 @@ function shuffleArray(array) {
 function startGame() {
     introContainer.style.display = 'none';
     quizContainer.style.display = 'block';
-    submitButton.style.display = 'none';  
+    submitButton.style.display = 'inline-block';
     displayQuestion();
 }
+
 
 // Function to display a question
 function displayQuestion() {
@@ -153,7 +154,7 @@ function displayQuestion() {
             if (currentQuestion < quizData.length - 1) {
                 currentQuestion++;
                 displayQuestion();
-            } else {
+                submitButton.style.display = 'inline-block';
                 displayResult();
             }
         } else {

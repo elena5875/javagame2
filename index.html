@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harry Potter Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
+</head>
 
-  <body class="background">
+<body class="background">
     <div class="container">
-      <!-- Introduction Section -->
-      <div id="introduction" class="introduction">
+        <!-- Introduction Section -->
+    <div id="introduction" class="introduction">
         <h1>Welcome to the Harry Potter Trivia Game!</h1>
         <p>Where your knowledge of the Movie will be tested!</p>
         <p>Have Fun and Good Luck!</p>
         <button id="letTheGameBegin" class="button">
-          Click to Start the Game
+            Click to Start the Game
         </button>
-      </div>
+    </div>
+    
+    <!-- Quiz Section -->
+    <div id="quiz" class="hide">
+    </div>
+        <!-- Result Section -->
+        <div id="result" class="result hide"></div>
 
-      <!-- Quiz Section -->
-      <div id="quiz" class="hide"></div>
-
-      <!-- Result Section -->
-      <div id="result" class="result hide"></div>
-
-      <!-- Buttons -->
-      <button id="retry" class="button hide">Retry</button>
-      <button id="showAnswer" class="button hide">Show Answer</button>
-      <button id="submit" class="button">Submit</button>
+        <!-- Buttons -->
+        <button id="retry" class="button hide">Retry</button>
+        <button id="showAnswer" class="button hide">Show Answer</button>
+        <button id="submit" class="button hide">Submit Answer</button>
     </div>
     <script src="./assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>
