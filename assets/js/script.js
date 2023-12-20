@@ -129,15 +129,18 @@ function displayQuestion() {
 }
 
 
-// Function to start the game
+//Function to start the game
 function startGame() {
     introContainer.style.display = 'none';
     quizContainer.style.display = 'block';
 
     displayQuestion();
 
+    submitButton.style.display = 'inline-block';
+
     submitButton.addEventListener('click', checkAnswer);
 }
+
 
 // Function to check the selected answer
 function checkAnswer() {
