@@ -91,134 +91,128 @@ function shuffleArray(array) {
 
 // Function to start the game
 function startGame() {
-    // Hide the introduction container
     introContainer.style.display = 'none';
+    quizContainer.style.display = 'block';
+    submitButton.style.display = 'none';
 
-    // Function to display a question
-    function displayQuestion() {
+    displayQuestion();
+}
 
-        const questionData = quizData[currentQuestion];
+// Function to display a question
+function displayQuestion() {
+    const questionData = quizData[currentQuestion];
 
-        const questionElement = document.createElement('div');
-        questionElement.className = 'question';
-        questionElement.innerHTML = questionData.question;
+    const questionElement = document.createElement('div');
+    questionElement.className = 'question';
+    questionElement.innerHTML = questionData.question;
 
-        const optionsElement = document.createElement('div');
-        optionsElement.className = 'options';
+    const optionsElement = document.createElement('div');
+    optionsElement.className = 'options';
 
-        const shuffledOptions = [...questionData.options];
-        shuffleArray(shuffledOptions);
+    const shuffledOptions = [...questionData.options];
+    shuffleArray(shuffledOptions);
 
-        for (let i = 0; i < shuffledOptions.length; i++) {
-            const option = document.createElement('label');
-            option.className = 'option';
+    for (let i = 0; i < shuffledOptions.length; i++) {
+        const option = document.createElement('label');
+        option.className = 'option';
 
-            const radio = document.createElement('input');
-            radio.type = 'radio';
-            radio.name = 'quiz';
-            radio.value = shuffledOptions[i];
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = 'quiz';
+        radio.value = shuffledOptions[i];
 
-            const optionText = document.createTextNode(shuffledOptions[i]);
+        const optionText = document.createTextNode(shuffledOptions[i]);
 
-            option.appendChild(radio);
-            option.appendChild(optionText);
-            optionsElement.appendChild(option);
-        }
-
-        quizContainer.innerHTML = '';
-        quizContainer.appendChild(questionElement);
-        quizContainer.appendChild(optionsElement);
-
-        // Show the submit button for quiz questions
-        submitButton.style.display = 'inline-block';
-        showAnswerButton.style.display = 'none';
+        option.appendChild(radio);
+        option.appendChild(optionText);
+        optionsElement.appendChild(option);
     }
 
-    // Function to start the game
-    function startGame() {
+    quizContainer.innerHTML = '';
+    quizContainer.appendChild(questionElement);
+    quizContainer.appendChild(optionsElement);
 
-        introContainer.style.display = 'none';
-        quizContainer.style.display = 'block';
-        displayQuestion();
-        submitButton.style.display = 'none';
-    }
 
-    // Function to check the selected answer
-    function checkAnswer() {
-        const selectedOption = document.querySelector('input[name="quiz"]:checked');
-        if (selectedOption) {
-            const answer = selectedOption.value;
-            if (answer === quizData[currentQuestion].answer) {
-                score++;
-            } else {
-                incorrectAnswers.push({
-                    question: quizData[currentQuestion].question,
-                    incorrectAnswer: answer,
-                    correctAnswer: quizData[currentQuestion].answer,
-                });
-            }
-            selectedOption.checked = false;
+    submitButton.style.display = 'inline-block';
+    showAnswerButton.style.display = 'none';
+}
 
-            if (currentQuestion < quizData.length - 1) {
-                currentQuestion++;
-                displayQuestion();
-            } else {
-                displayResult();
-            }
+// Function to check the selected answer
+function checkAnswer() {
+    const selectedOption = document.querySelector('input[name="quiz"]:checked');
+    if (selectedOption) {
+        const answer = selectedOption.value;
+        if (answer === quizData[currentQuestion].answer) {
+            score++;
         } else {
-            alert('Please choose an answer before submitting.');
+            incorrectAnswers.push({
+                question: quizData[currentQuestion].question,
+                incorrectAnswer: answer,
+                correctAnswer: quizData[currentQuestion].answer,
+            });
         }
+        selectedOption.checked = false;
+
+        if (currentQuestion < quizData.length - 1) {
+            currentQuestion++;
+            displayQuestion();
+        } else {
+            displayResult();
+        }
+    } else {
+        alert('Please choose an answer before submitting.');
     }
+}
 
-    // Function to display the final result
-    function displayResult() {
-        quizContainer.style.display = 'none';
-        submitButton.style.display = 'none';
-        retryButton.style.display = 'inline-block';
-        showAnswerButton.style.display = 'inline-block';
-        resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
-    }
+// Function to display the final result
+function displayResult() {
+    quizContainer.style.display = 'none';
+    submitButton.style.display = 'none';
+    retryButton.style.display = 'inline-block';
+    showAnswerButton.style.display = 'inline-block';
+    resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+}
 
-    // Function to retry the quiz
-    function retryQuiz() {
-        currentQuestion = 0;
-        score = 0;
-        incorrectAnswers = [];
-        quizContainer.style.display = 'block';
-        submitButton.style.display = 'inline-block';
-        retryButton.style.display = 'none';
-        showAnswerButton.style.display = 'none';
-        resultContainer.innerHTML = '';
-        displayQuestion();
-    }
+// Function to retry the quiz
+function retryQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    incorrectAnswers = [];
+    quizContainer.style.display = 'block';
+    submitButton.style.display = 'inline-block';
+    retryButton.style.display = 'none';
+    showAnswerButton.style.display = 'none';
+    resultContainer.innerHTML = '';
+    displayQuestion();
+}
 
-    // Function to show correct answers for incorrect responses
-    function showAnswer() {
-        quizContainer.style.display = 'none';
-        submitButton.style.display = 'none';
-        retryButton.style.display = 'inline-block';
-        showAnswerButton.style.display = 'none';
+// Function to show correct answers for incorrect responses
+function showAnswer() {
+    quizContainer.style.display = 'none';
+    submitButton.style.display = 'none';
+    retryButton.style.display = 'inline-block';
+    showAnswerButton.style.display = 'none';
 
-        let incorrectAnswersHtml = '';
-        for (let i = 0; i < incorrectAnswers.length; i++) {
-            incorrectAnswersHtml += `
+    let incorrectAnswersHtml = '';
+    for (let i = 0; i < incorrectAnswers.length; i++) {
+        incorrectAnswersHtml += `
             <p>
                 <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
                 <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
                 <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
             </p>
         `;
-        }
+    }
 
-        resultContainer.innerHTML = `
+    resultContainer.innerHTML = `
         <p>You scored ${score} out of ${quizData.length}!</p>
         <p>Incorrect Answers:</p>
         ${incorrectAnswersHtml}
     `;
-    }
+}
 
-    // Event listeners
-    startButton.addEventListener('click', startGame);
-    submitButton.addEventListener('click', checkAnswer);
-    retryButton.addEventListener('click', retryQuiz);
-    showAnswerButton.addEventListener('click', showAnswer);
+// Event listeners
+startButton.addEventListener('click', startGame);
+submitButton.addEventListener('click', checkAnswer);
+retryButton.addEventListener('click', retryQuiz);
+showAnswerButton.addEventListener('click', showAnswer);
