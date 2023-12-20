@@ -3,6 +3,8 @@ body {
     background: blue;
     margin: 0;
     color: #fff;
+    font-size: 16px;
+    /* Set a default font size for the entire document */
 }
 
 .background {
@@ -15,29 +17,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #000;
+    /* Set text color for better contrast */
 }
 
-.introduction,
-.result,
-.container,
-.question {
+.container {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
     padding: 20px;
     margin-bottom: 20px;
     font-weight: bold;
-    color: #000;
-
 }
 
-/* Add this to your existing stylesheet */
 .introduction {
     border: 1px solid #4CAF50;
     box-shadow: 0 2px 4px rgba(0, 128, 0, 0.2);
     padding: 10px;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #000;
 }
 
 .question,
@@ -49,7 +46,6 @@ body {
     font-size: 1.2rem;
     letter-spacing: normal;
     font-weight: bolder;
-    color: #000;
 }
 
 .options {
@@ -62,16 +58,6 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-.question {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    font-size: 1.2rem;
-    letter-spacing: normal;
-    font-weight: bolder;
-    color: #000;
 }
 
 .button {
