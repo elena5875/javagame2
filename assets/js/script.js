@@ -132,15 +132,10 @@ function displayQuestion() {
     quizContainer.appendChild(questionElement);
     quizContainer.appendChild(optionsElement);
 
-    const submitButton = document.createElement('button');
-    submitButton.id = 'submit';
-    submitButton.className = 'button';
-    submitButton.textContent = 'Submit Answer';
-    quizContainer.appendChild(submitButton);
-
+    // Ensure the global submitButton is used
+    submitButton.style.display = 'inline-block';
     submitButton.addEventListener('click', checkAnswer);
 }
-
 
 
 
