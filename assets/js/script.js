@@ -91,7 +91,7 @@ function shuffleArray(array) {
 
 function displayQuestion() {
     startTime = Date.now();
-    submitButton = document.getElementById('submit'); // Move this line to the beginning
+    submitButton = document.getElementById('submit');
 
     const questionData = quizData[currentQuestion];
 
@@ -133,9 +133,6 @@ function displayQuestion() {
 function startGame() {
     introContainer.style.display = 'none';
     quizContainer.style.display = 'block';
-
-    // Hide submit button in the quiz section
-    document.getElementById('submit').style.display = 'none';
 
     displayQuestion();
 
