@@ -45,13 +45,16 @@ The game is responsive in all media types.
 ##  Score Area and Feedback
     After the user has answered all the question, It will show the number of correct answer you made. 
     The user can then choose to retry the questions again or show the correct answer.
+    Should the user choose to click the retry button, the questions will be randomly placed 
+    so the user will have a little challenge in answering the question again
+![screenshot-tablet](assets/images/retryandshowanswer.jpg)
+    However, should the user click the show answer. The User will be shown the correct answer on
+    all the questions the user did not get.
 ![screenshot-tablet](assets/images/scoreandcorrectanswer.jpg)
   
 ![screenshot-tablet](assets/images/feedback.jpg)
 
-![screenshot-tablet](assets/images/retryandshowanswer.jpg)
-    Should the user choose to click the retry button, the questions will be randomly placed 
-    so the user will have a little challenge in answering the question again
+
 
 
  #   Testing
@@ -70,7 +73,7 @@ The game is responsive in all media types.
 ![screenshot-tablet](assets/images/javascriptvalidation.jpg)
 
 ## Lighthouse Accessability Report: 
- The website was also inspected thru lighthouse and showed an accessability report of 89%
+ The website was also inspected thru lighthouse and showed an accessability report of 90%
 ![screenshot-tablet](assets/images/lighthouseperformance.jpg)
 ![screenshot-tablet](assets/images/lighthouse.jpg)
 ![screenshot-tablet](assets/images/lighthouseaccesibility.jpg)
