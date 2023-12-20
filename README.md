@@ -13,20 +13,21 @@ The game is responsive in all media types.
      
 # Features
 
-Introduction
+## Introduction
     The plyaer will first be welcomed before the game starts. The user is then asked to 
     click to the Start the Game button so the user can start playing the game
  ![screenshot-tablet](assets/images/welcome.jpg)
 
-Background and Heading: 
+## Background and Heading: 
  The background of the website is the Heading also  "Harry Potter Hogwarts Mystery"
  The background has a black color with a silver color for the letters.
  This is to ensure that the user will immediately know that the trivia is
   all about Harry Potter Story
+![screenshot-tablet](assets/images/harrypotterlogo.png)
 
 ![screenshot-tablet](assets/images/welcome.jpg)
 
-# Game Area
+## Game Area
     
     The questionaire is at the middle of the screen.
     There is a transparent background and border so that the user can easily read
@@ -34,14 +35,14 @@ Background and Heading:
     The questions should be easily readable and the buttons easily be seen
     At the left side at the end of the options the submit button should easily be seen
         and changes color when you hover your mouse over it.
-![screenshot-tablet](assets/images/questionaire.jpg)
+![screenshot-tablet](assets/images/questionandsubmit.jpg)
 
     Should the user accidentally click the submit button. The user will be alerted to 
     choose an answer before submitting
 ![screenshot-tablet](assets/images/prompt.jpg)
     
    
-  #  Score Area and Feedback
+##  Score Area and Feedback
     After the user has answered all the question, It will show the number of correct answer you made. 
     The user can then choose to retry the questions again or show the correct answer.
 ![screenshot-tablet](assets/images/scoreandcorrectanswer.jpg)
