@@ -19,7 +19,6 @@ body {
     justify-content: center;
     align-items: center;
     color: #000;
-    
 }
 
 /* Styling for the main content container */
@@ -94,7 +93,7 @@ body {
     box-shadow: 0 0 0 2px #afd8f8;
 }
 
-/* Hide the button initially */
+/* Hide elements by default */
 .hide {
     display: none;
 }
@@ -123,4 +122,8 @@ body {
 /* Margin for radio button in options */
 .option input[type="radio"] {
     margin-right: 10px;
+}
+
+.result {
+    display: none;
 }
